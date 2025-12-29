@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;800&family=Martel:wght@700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-agro-green: #1B4332;
+  --color-agro-orange: #F3722C;
+  --color-agro-cream: #FDFBF7;
+}
+
+:root {
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-hi: 'Martel', serif;
+}
+
+body {
+  background-color: var(--color-agro-cream);
+  color: #1a1a1a;
+  font-family: var(--font-sans);
+  cursor: none; /* System cursor hidden */
+  overflow-x: hidden;
+}
+
+/* This hides the real mouse pointer everywhere */
+html, body, #root {
+  cursor: none !important;
+}
+
+/* Ensure buttons and links also don't show the pointer */
+a, button, input, textarea, [role="button"] {
+  cursor: none !important;
+}
+
+/* HIGH-VISIBILITY INDIAN FARMING BACKGROUNDS */
+.bg-vivid-hero {
+  background-image: linear-gradient(rgba(253, 251, 247, 0.5), rgba(253, 251, 247, 0.8)), url("https://images.pexels.com/photos/259280/pexels-photo-259280.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-vivid-soil {
+  background-image: linear-gradient(rgba(27, 67, 50, 0.9), rgba(27, 67, 50, 0.95)), url("https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* CUSTOM OUTLINED LEAF CURSOR (ZERO DELAY) */
+#leaf-pointer {
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s linear;
+}
+
+/* Tagline Font Styling from Reference Image */
+.tagline-styled {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1B4332;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+}
+
+.heading-hindi { font-family: var(--font-hi); line-height: 1.4; }
+
+.wa-float {
+  animation: wa-pulse 2s infinite;
+}
+@keyframes wa-pulse {
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+} 
